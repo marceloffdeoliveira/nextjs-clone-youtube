@@ -10,6 +10,11 @@ export default class MyDocument extends Document {
         <Head>
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
+            rel="icon"
+            href="https://www.youtube.com/s/desktop/3748dff5/img/favicon_144.png"
+            sizes="144x144"
+          />
+          <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
