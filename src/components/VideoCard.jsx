@@ -25,7 +25,7 @@ function VideoCard({ item }) {
     <Box>
       <img src={item.thumb} alt="" className={classes.img} />
       <Box display="flex" mt="1">
-        <Box>
+        <Box mr={2}>
           <Avatar alt={item.authorName} src={item.authorAvatar}>
             SS
           </Avatar>
@@ -43,7 +43,7 @@ function VideoCard({ item }) {
             {item.authorName}
           </Typography>
           <Typography variant="body2" color="textSecondary">
-            {`${item.views} • ${dayjs(item.updatedAt).fromNow()}`}
+            {`${item.views} visualizações • ${dayjs(item.updatedAt).fromNow()}`}
           </Typography>
         </Box>
       </Box>

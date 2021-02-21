@@ -3,6 +3,7 @@ import React from 'react';
 
 import Layout from 'src/components/Layout';
 import VideoCard from 'src/components/VideoCard';
+import { getVideos } from 'src/database/getVideos';
 
 function Home({ data }) {
   return (
@@ -21,41 +22,8 @@ function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const data = [
-    {
-      id: 1,
-      title: 'NOME DO VÍDEO',
-      authorId: 1,
-      authorName: 'Marcelo Francisco',
-      authorAvatar: 'avatarUrl',
-      views: 10,
-      thumb: '/thumbs/next01.png',
-      videoUrl: 'url',
-      updatedAt: new Date(),
-    },
-    {
-      id: 2,
-      title: 'NOME DO VÍDEO',
-      authorId: 2,
-      authorName: 'Marcelo Francisco',
-      authorAvatar: 'avatarUrl',
-      views: 10,
-      thumb: '/thumbs/next01.png',
-      videoUrl: 'url',
-      updatedAt: new Date(),
-    },
-    {
-      id: 3,
-      title: 'NOME DO VÍDEO',
-      authorId: 3,
-      authorName: 'Marcelo Francisco',
-      authorAvatar: 'avatarUrl',
-      views: 10,
-      thumb: '/thumbs/next01.png',
-      videoUrl: 'url',
-      updatedAt: new Date(),
-    },
-  ];
+
+  const data = await getVideos();
 
   return {
     props: {
